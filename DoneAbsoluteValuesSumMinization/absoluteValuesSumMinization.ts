@@ -1,7 +1,7 @@
-function absoluteValuesSumMinimization(a: number[]): boolean {
-    const isEven: boolean = a.length/2 == true;
+function absoluteValuesSumMinimization(a: number[]): number {
+    const isEven = a.length%2===0
 
-    return isEven;  
+    return isEven ? a[a.length/2-1] : a[Math.floor(a.length/2)];  
 }
 
 console.log(absoluteValuesSumMinimization([2, 4, 7]));
